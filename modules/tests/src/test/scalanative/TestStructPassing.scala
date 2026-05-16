@@ -25,5 +25,13 @@ class TestStructPassing:
 
       assertEquals(struct.i, 115 * 115 - 1)
 
+      val struct1 = FunctionArg(42, c"universe")
+      val struct2 = FunctionArg(128, c"yo")
+      val result = function_returning_and_taking_structs(struct1, struct2)
+
+      assertEquals(result.i, 42 + 128)
+      assertEquals(fromCString(result.str), "universeyo")
+
+
     }
 end TestStructPassing

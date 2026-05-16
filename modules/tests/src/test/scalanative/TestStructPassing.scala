@@ -32,6 +32,5 @@ class TestStructPassing:
       assertEquals(result.i, 42 + 128)
       assertEquals(fromCString(result.str), "universeyo")
 
-
     }
 end TestStructPassing
